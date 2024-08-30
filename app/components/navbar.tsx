@@ -10,13 +10,13 @@ export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const linkStyle = (path: string) =>
-    `text-sm cursor-pointer flex justify-center pt-2 border-b-2 hover:text-primary hover:border-text-primary ${
+    `text-sm cursor-pointer flex justify-center pt-2 border-b-2 hover:text-primary hover:border-text-primary transition-colors duration-200 ${
       currentPath === path
         ? 'text-primary border-primary'
         : 'text-text-light border-transparent hover:border-text-primary'
     }`;
 
-  const contactStyle = `p-2 px-4 border-2 bg-primay border-primary-brown bg-primary-olive text-text-dark rounded-full hover:bg-accent-red hover:text-text-dark`;
+  const contactStyle = `p-2 px-4 border-2 bg-text-light text-primary rounded-full hover:bg-accent-red hover:text-text-dark hover:border-accent-red transition-colors duration-200`;
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -58,7 +58,7 @@ export default function Navbar() {
               Produits
             </Link>
             <Link href="/avions" className={linkStyle('/avions')}>
-              Nos avions
+              Avions
             </Link>
             <Link
               href="/contact"
@@ -116,10 +116,10 @@ export default function Navbar() {
           </Link>
           <Link
             href="/marques"
-            className={linkStyle('/marques')}
+            className={linkStyle('/avions')}
             onClick={toggleSidebar}
           >
-            Marques
+            Avions
           </Link>
           <Link
             href="/contact"

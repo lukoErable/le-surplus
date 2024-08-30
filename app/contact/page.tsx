@@ -57,7 +57,7 @@ const ContactPage = () => {
     <main className="flex flex-col items-center justify-between p-4 md:p-8 text-text-light h-screen">
       <div className="z-10 w-full max-w-5xl font-body text-sm flex flex-col lg:flex-row gap-8 space-x-8">
         <div className="lg:w-3/5 space-y-6 bg-primary p-6 rounded-lg shadow-military">
-          <h1 className="text-3xl font-heading mb-4 text-accent-orange">
+          <h1 className="text-3xl font-heading mb-4 text-accent-red">
             {text.title}
           </h1>
           {/* <p className="mb-6 text-primary-sand">{text.subtitle}</p> */}
@@ -69,7 +69,7 @@ const ContactPage = () => {
                 name="name"
                 placeholder={text.name}
                 onChange={handleChange}
-                className="w-full p-2 border border-primary-sand rounded bg-primary-olive text-primary-sand placeholder-primary-sand"
+                className="w-full p-2 border border-primary-sand rounded bg-primary-olive text-text-light placeholder-primary-sand"
                 required
               />
               <input
@@ -77,7 +77,7 @@ const ContactPage = () => {
                 name="surname"
                 placeholder={text.surname}
                 onChange={handleChange}
-                className="w-full p-2 border border-primary-sand rounded bg-primary-olive text-primary-sand placeholder-primary-sand"
+                className="w-full p-2 border border-primary-sand rounded bg-primary-olive text-text-light placeholder-primary-sand"
                 required
               />
             </div>
@@ -87,7 +87,7 @@ const ContactPage = () => {
                 name="email"
                 placeholder={text.email}
                 onChange={handleChange}
-                className="w-full p-2 border border-primary-sand rounded bg-primary-olive text-primary-sand placeholder-primary-sand"
+                className="w-full p-2 border border-primary-sand rounded bg-primary-olive text-text-light placeholder-primary-sand"
                 required
               />
               <input
@@ -104,7 +104,7 @@ const ContactPage = () => {
               name="message"
               placeholder={text.message}
               onChange={handleChange}
-              className="w-full p-2 border border-primary-sand rounded bg-primary-olive text-primary-sand placeholder-primary-sand h-32"
+              className="w-full p-2 border border-primary-sand rounded bg-primary-olive text-text-light placeholder-primary-sand h-32"
               required
             ></textarea>
             <button
@@ -118,9 +118,9 @@ const ContactPage = () => {
 
         <div className="lg:w-2/5 space-y-4">
           <div className="flex items-center space-x-4 bg-primary p-4 rounded-lg">
-            <FaPhone className="text-3xl text-accent-orange rotate-90" />
+            <FaPhone className="text-3xl text-accent-red rotate-90" />
             <div>
-              <h2 className="font-semibold text-primary-sand">
+              <h2 className="font-semibold text-text-dark">
                 {text.phoneLabel}
               </h2>
               <p className="text-lg font-bold text-text-light">
@@ -129,9 +129,9 @@ const ContactPage = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4 bg-primary p-4 rounded-lg">
-            <FaEnvelope className="text-3xl text-accent-orange" />
+            <FaEnvelope className="text-3xl text-accent-red" />
             <div>
-              <h2 className="font-semibold text-primary-sand">
+              <h2 className="font-semibold text-text-dark">
                 {text.emailLabel}
               </h2>
               <p className="text-lg font-bold text-text-light">
@@ -141,11 +141,11 @@ const ContactPage = () => {
           </div>
           <div className="flex items-center space-x-4 bg-primary p-4 rounded-lg">
             <FaMapMarkerAlt
-              className="text-3xl text-accent-orange m-1"
+              className="text-3xl text-accent-red m-1"
               size={35}
             />
             <div>
-              <h2 className="font-semibold text-primary-sand">
+              <h2 className="font-semibold text-text-dark">
                 {text.addressLabel}
               </h2>
               <p className="text-lg font-bold text-text-light">
