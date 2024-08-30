@@ -10,23 +10,20 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#1A2F0F', // Dark green
-          olive: '#3D4F2E', // Darker olive green
-          sand: '#1C1C1C', // Very dark gray (almost black)
-          khaki: '#9B8D30', // Dark khaki (yellowish-green)
-          camo: '#2D3A1F', // Dark camouflage green
+          DEFAULT: '#171615', // Noir Militaire
+          olive: '#4C4F3B', // Vert Olive
+          brown: '#69432D', // Brun Militaire
         },
         neutral: {
-          dark: '#0F0F0F', // Very dark gray (almost black)
-          light: '#D9D9D9', // Light gray
+          dark: '#303030', // Gris Foncé
+          light: '#D9D9D9', // Pour contraster, peut être ajusté
         },
         accent: {
-          yellow: '#FFD700', // Gold (yellow)
-          green: '#355E3B', // Hunter green
+          red: '#9D0000', // Rouge Sombre
         },
         text: {
-          dark: '#000000', // Black
-          light: '#FFD700', // Yellow
+          dark: '#FFFFFF', // Blanc pour le texte sur fond sombre
+          light: '#FFD700', // Jaune pour les accents lumineux
         },
       },
       fontFamily: {

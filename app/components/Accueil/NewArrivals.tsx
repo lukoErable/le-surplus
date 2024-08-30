@@ -145,8 +145,8 @@ const ProductSection = ({
   return (
     <animated.div ref={sectionRef} style={fadeIn} className="mb-12">
       <div className="bg-primary mb-2 p-2 rounded-lg shadow-lg">
-        <h2 className="text-center text-primary-sand text-2xl p-2">{title}</h2>
-        <p className="text-white text-center">{description}</p>
+        <h2 className="text-center text-2xl p-2 text-text-light">{title}</h2>
+        <p className="text-text-dark text-center">{description}</p>
       </div>
       <div className="flex flex-col md:flex-row items-center bg-primary-olive rounded-lg shadow-lg overflow-hidden">
         <div className="w-full md:w-1/3 p-6 bg-primary text-white">

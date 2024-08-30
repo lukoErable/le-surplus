@@ -72,7 +72,7 @@ const StoreStatus: React.FC = () => {
           {statusMessage}
         </span>
       </h2>
-      <div className="text-md mb-4 text-center text-text-light flex flex-col">
+      <div className="text-md mb-4 text-center text-text-dark flex flex-col">
         <div>
           <FaRegClock className="inline mr-2" />
           <span>Aujourd&apos;hui : </span>

@@ -61,23 +61,25 @@ p {
   color: theme('colors.neutral.light');
 }
 a {
-  color: theme('colors.accent.yellow');
+  color: theme('colors.text.light'); /* Jaune pour les liens */
   font-weight: 600;
 }
 
 a:hover {
-  color: theme('colors.accent.green');
+  color: theme('colors.primary.olive'); /* Vert olive au survol */
 }
 
 button {
-  background-color: theme('colors.primary.olive');
-  color: theme('colors.text.light');
+  background-color: theme(
+    'colors.primary.olive'
+  ); /* Vert olive pour les boutons */
+  color: theme('colors.text.dark'); /* Texte blanc pour contraste */
   font-weight: 700;
-  border: 2px solid theme('colors.primary.sand');
+  border: 2px solid theme('colors.primary.brown'); /* Bordure brun militaire */
 }
 
 button:hover {
-  background-color: theme('colors.accent.green');
+  background-color: theme('colors.accent.red'); /* Rouge sombre au survol */
 }
 .group-subcategory:hover > ul {
   display: block;

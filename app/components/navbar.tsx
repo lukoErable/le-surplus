@@ -10,13 +10,13 @@ export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const linkStyle = (path: string) =>
-    `text-sm cursor-pointer flex justify-center pt-2 border-b-2 ${
+    `text-sm cursor-pointer flex justify-center pt-2 border-b-2 hover:text-primary hover:border-text-primary ${
       currentPath === path
-        ? 'text-black border-black'
-        : 'border-transparent hover:border-black'
+        ? 'text-primary border-primary'
+        : 'text-text-light border-transparent hover:border-text-primary'
     }`;
 
-  const contactStyle = `p-2 px-4 border-2 bg-primary-olive text-text-light rounded-full hover:bg-primary-sand hover:text-text-dark hover:border-transparent`;
+  const contactStyle = `p-2 px-4 border-2 bg-primay border-primary-brown bg-primary-olive text-text-dark rounded-full hover:bg-accent-red hover:text-text-dark`;
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -40,12 +40,12 @@ export default function Navbar() {
   }, [isSidebarOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-primary shadow-md font-blackOps">
-      <div className="max-w-6xl mx-auto ">
+    <header className="sticky top-0 z-50 bg-primary-DEFAULT shadow-military font-blackOps">
+      <div className="max-w-6xl mx-auto">
         <div className="px-6 sm:px-10 md:px-10 lg:px-0 flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <h1 className="font-bold text-3xl text-primary-khaki font-blackOps">
+              <h1 className="font-bold text-3xl text-text-light font-blackOps">
                 Le Surplus
               </h1>
             </Link>
@@ -84,20 +84,20 @@ export default function Navbar() {
 
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-primary-DEFAULT bg-opacity-80 z-40"
           onClick={toggleSidebar}
         ></div>
       )}
 
       <div
         id="sidebar"
-        className={`fixed top-0 right-0 h-full w-64 bg-primary z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-64 bg-primary-olive z-50 transform transition-transform duration-300 ease-in-out ${
           isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          className="absolute top-4 right-4 text-text-light"
+          className="absolute top-4 right-4 text-text-dark"
           onClick={toggleSidebar}
           aria-label="Close Sidebar"
         >

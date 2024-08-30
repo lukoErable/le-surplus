@@ -31,9 +31,9 @@ const StoreHours = () => {
           }`}
         >
           <h3 className="text-lg font-semibold text-text-light mb-2">{day}</h3>
-          <p className="text-text-light text-sm">{times.morning}</p>
+          <p className="text-text-dark text-sm">{times.morning}</p>
           {times.afternoon && (
-            <p className="text-text-light text-sm">{times.afternoon}</p>
+            <p className="text-text-dark text-sm">{times.afternoon}</p>
           )}
         </div>
       ))}
