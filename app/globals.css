@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#__next {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+.black-ops-one-regular {
+  font-family: 'Black Ops One', system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #556b2f;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: theme('colors.primary.DEFAULT');
+}
+
+p {
+  color: theme('colors.neutral.light');
+}
+a {
+  color: theme('colors.accent.yellow');
+  font-weight: 600;
+}
+
+a:hover {
+  color: theme('colors.accent.green');
+}
+
+button {
+  background-color: theme('colors.primary.olive');
+  color: theme('colors.text.light');
+  font-weight: 700;
+  border: 2px solid theme('colors.primary.sand');
+}
+
+button:hover {
+  background-color: theme('colors.accent.green');
+}
+.group-subcategory:hover > ul {
+  display: block;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.first-product {
+  margin-left: 0px;
+}
+
+@media (max-width: 768px) {
+  .first-product {
+    margin-left: 0;
+  }
+}
+
+.blurred-product {
+  filter: blur(4px);
+  transition: filter 0.3s ease-in-out;
+  margin-right: -50px;
+}
+
+.blurred-product:hover {
+  filter: blur(0);
+}
+
+.product-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 300px; /* Set a maximum width */
+  margin: 0 auto; /* Center the card */
+}
+
+@media (min-width: 768px) {
+  .product-section {
+    flex-direction: row;
+  }
+
+  .product-card {
+    width: 45%; /* Adjust width for larger screens */
+    margin: 0 2.5%; /* Center with margin */
+  }
+}
