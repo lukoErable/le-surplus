@@ -24,12 +24,24 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
 }
 
 #__next {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+.products-container::-webkit-scrollbar {
+  display: none;
+}
+
+.products-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');

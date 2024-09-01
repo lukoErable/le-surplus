@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         primary: {
           DEFAULT: '#171615', // Noir Militaire
-          olive: '#4C4F3B', // Vert Olive
+          olive: '#213128', // Vert Olive
           brown: '#69432D', // Brun Militaire
         },
         neutral: {

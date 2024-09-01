@@ -102,10 +102,10 @@ const Products: React.FC = () => {
           placeholder="Rechercher un produit..."
           value={searchQuery}
           onChange={handleSearchChange}
-          className="z-10 w-full sm:w-2/5 p-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-orange text-black mx-auto"
+          className="z-10 w-full sm:w-2/5 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-orange text-black mx-auto"
         />
       )}
-      <ul className="flex flex-wrap justify-center mb-6 relative z-10 gap-4">
+      <ul className="flex flex-wrap justify-center relative z-10 gap-4">
         {categoryStructure.map((category) => (
           <li key={category.name} className="relative group">
             <button

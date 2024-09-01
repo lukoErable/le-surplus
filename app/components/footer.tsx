@@ -7,14 +7,14 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-around text-center">
           <div className="w-full sm:w-1/2 md:w-1/4 mb-6">
-            <h4 className="text-lg font-semibold border-b-2 border-primary-olive pb-2 mb-4 text-primary-sand">
+            <h4 className="text-lg font-semibold border-b-2 border-primary-olive pb-2 mb-4 text-text-dark">
               À propos
             </h4>
             <p>© SARL Le Surplus 2013</p>
           </div>
 
           <div className="w-full sm:w-1/2 md:w-1/4 mb-6">
-            <h4 className="text-lg font-semibold border-b-2 border-primary-olive pb-2 mb-4 text-primary-sand">
+            <h4 className="text-lg font-semibold border-b-2 border-primary-olive pb-2 mb-4 text-text-dark">
               Liens utiles
             </h4>
             <ul>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="w-full sm:w-1/2 md:w-1/4 mb-6">
-            <h4 className="text-lg font-semibold border-b-2 border-primary-olive pb-2 mb-4 text-primary-sand">
+            <h4 className="text-lg font-semibold border-b-2 border-primary-olive pb-2 mb-4 text-text-dark">
               Suivez-nous
             </h4>
             <ul className="flex space-x-4 justify-center">

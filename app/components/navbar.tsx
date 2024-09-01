@@ -10,10 +10,10 @@ export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const linkStyle = (path: string) =>
-    `text-sm cursor-pointer flex justify-center pt-2 border-b-2 hover:text-primary hover:border-text-primary transition-colors duration-200 ${
+    `text-sm cursor-pointer flex justify-center pt-2 border-b-2 transition-colors duration-200 ${
       currentPath === path
-        ? 'text-primary border-primary'
-        : 'text-text-light border-transparent hover:border-text-primary'
+        ? 'text-text-light border-text-light'
+        : 'text-text-dark border-transparent hover:border-text-light'
     }`;
 
   const contactStyle = `p-2 px-4 border-2 bg-text-light text-primary rounded-full hover:bg-accent-red hover:text-text-dark hover:border-accent-red transition-colors duration-200`;
@@ -40,14 +40,12 @@ export default function Navbar() {
   }, [isSidebarOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-primary-DEFAULT shadow-military font-blackOps">
+    <header className="sticky top-0 z-50 bg-primary shadow-military font-blackOps">
       <div className="max-w-6xl mx-auto">
         <div className="px-6 sm:px-10 md:px-10 lg:px-0 flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <h1 className="font-bold text-3xl text-text-light font-blackOps">
-                Le Surplus
-              </h1>
+              <h1 className="font-bold text-3xl text-text-light">Le Surplus</h1>
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
@@ -84,7 +82,7 @@ export default function Navbar() {
 
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-primary-DEFAULT bg-opacity-80 z-40"
+          className="fixed inset-0 bg-primary bg-opacity-80 z-40"
           onClick={toggleSidebar}
         ></div>
       )}
@@ -115,7 +113,7 @@ export default function Navbar() {
             Produits
           </Link>
           <Link
-            href="/marques"
+            href="/avions"
             className={linkStyle('/avions')}
             onClick={toggleSidebar}
           >
