@@ -1,6 +1,6 @@
 import csvParser from 'csv-parser';
 import fs from 'fs';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import path from 'path';
 
 type Product = {
@@ -14,7 +14,9 @@ type Product = {
   'TAILLES/COULEURS': string;
 };
 
-export const GET = async (request: Request) => {
+export const dynamic = 'force-dynamic';
+
+export const GET = async (request: NextRequest) => {
   try {
     const results: Product[] = [];
     const csvFilePath = path.join(process.cwd(), 'scripts/marche/output.csv');
@@ -29,41 +31,27 @@ export const GET = async (request: Request) => {
 
     const rows = await readCSV;
 
-    // Extract product ID from the request URL
-    const url = new URL(request.url);
-    const productId = url.searchParams.get('id');
+    const productId = request.nextUrl.searchParams.get('id');
 
     if (productId) {
       const product = rows.find((row) => row.ID === productId);
 
       if (product) {
-        return new NextResponse(JSON.stringify(product), {
-          status: 200,
-          headers: { 'Content-Type': 'application/json' },
-        });
+        return NextResponse.json(product);
       } else {
-        return new NextResponse(
-          JSON.stringify({ message: 'Product not found' }),
-          {
-            status: 404,
-            headers: { 'Content-Type': 'application/json' },
-          }
+        return NextResponse.json(
+          { message: 'Product not found' },
+          { status: 404 }
         );
       }
     } else {
-      return new NextResponse(JSON.stringify(rows), {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return NextResponse.json(rows);
     }
   } catch (error) {
     console.error(error);
-    return new NextResponse(
-      JSON.stringify({ message: 'An error occurred', error: error }),
-      {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      }
+    return NextResponse.json(
+      { message: 'An error occurred', error: error },
+      { status: 500 }
     );
   }
 };

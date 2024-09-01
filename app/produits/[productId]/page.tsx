@@ -110,9 +110,9 @@ const ProductDetail: React.FC = () => {
 
   return (
     <div className="p-6 bg-primary-olive min-h-screen">
-      <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="max-w-7xl mx-auto bg-neutral-dark shadow-military rounded-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
-          <div className="relative w-full md:w-1/2 h-64 md:h-auto">
+          <div className="relative w-full md:w-1/2 h-64 md:h-auto bg-white">
             <Image
               src={product.Image}
               alt={product.Title}
@@ -122,7 +122,7 @@ const ProductDetail: React.FC = () => {
           </div>
           <div className="p-6 flex flex-col justify-between w-full md:w-1/2">
             <div>
-              <h1 className="text-2xl font-bold text-text-dark mb-4">
+              <h1 className="text-2xl font-bold text-text-dark mb-4 font-blackOps">
                 {product.Title}
               </h1>
               <p className="text-text-dark mb-4">
@@ -131,7 +131,7 @@ const ProductDetail: React.FC = () => {
 
               {colors.length > 0 && (
                 <div className="mb-4">
-                  <h2 className="text-lg font-semibold text-text-dark">
+                  <h2 className="text-lg font-semibold text-text-light">
                     Couleurs disponibles
                   </h2>
                   <div className="flex flex-wrap gap-4 mt-2">
@@ -140,7 +140,7 @@ const ProductDetail: React.FC = () => {
                         key={color}
                         className={`relative group w-8 h-8 flex items-center justify-center transform transition-transform duration-300 hover:scale-125 ${
                           selectedColor === color
-                            ? 'ring-2 ring-black rounded-full'
+                            ? 'ring-2 ring-text-light rounded-full'
                             : ''
                         }`}
                         onClick={() => setSelectedColor(color)}
@@ -161,7 +161,7 @@ const ProductDetail: React.FC = () => {
                             }}
                           ></span>
                         )}
-                        <div className="absolute bottom-full mb-1 text-center bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute bottom-full mb-1 text-center bg-primary text-text-dark text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           {color}
                         </div>
                       </div>
@@ -172,14 +172,14 @@ const ProductDetail: React.FC = () => {
 
               {selectedColor && filteredSizes.length > 0 && (
                 <div className="mb-4">
-                  <h2 className="text-lg font-semibold text-text-dark">
+                  <h2 className="text-lg font-semibold text-text-light">
                     Tailles disponibles en {selectedColor}
                   </h2>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {filteredSizes.map((size) => (
                       <span
                         key={size}
-                        className="px-2 py-1 bg-primary-olive text-white rounded"
+                        className="px-2 py-1 bg-primary-brown text-text-dark rounded"
                       >
                         {size}
                       </span>
